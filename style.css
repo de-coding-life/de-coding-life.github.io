@@ -271,3 +271,9 @@ img {
 section {
     display: inline;
 }
+
+@media (max-with:1000px) {
+    .footer {
+        position: fixed;
+    }
+}
