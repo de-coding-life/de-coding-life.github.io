@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.header {
+    font-weight: bold;
+    color: #000;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.a {
+    color: inherit;
+}
+
+.nav-bar {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.footer {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(248, 248, 248);
+    background-color: rgb(31, 31, 31);
+    font-style: italic;
+}
+
+.nav-bar a {
+    border-style: solid;
+    border-color: black;
+    color: rgb(208, 208, 208);
+    border-width: 2px;
+    border-radius: 10px;
+    position: sticky;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav-bar a:hover {
+    font-size: 17px;
+    color: rgb(30, 30, 30);
+    background-color: rgb(208, 208, 208);
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-bar li {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.sublist li {
+    display: none;
+    position: relative;
+    top: 0px;
+}
+
+.nav-bar li:hover .sublist>li {
+    display: block;
+    width: 100%;
+    top: 0px;
+}
+
+.sublist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+}
+
+.inphead {
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 30px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+
+.inp {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    border-radius: 5px;
+    width: 98%;
+    padding: 10px;
+    font-size: 20px;
+    display: inline-flex;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.out {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    border-radius: 5px;
+    width: 98%;
+    padding: 10px;
+    font-size: 20px;
+    display: inline-flex;
+    margin: 10px;
+    background-color: rgb(30, 30, 30);
+    text-align: right;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.submit2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d3d3d3;
+    background-color: rgb(30, 30, 30);
+    border-radius: 10px;
+    width: 125px;
+    height: 25px;
+    font-size: 20px;
+}
+
+.submit2:hover {
+    transition: 0.5s;
+    color: rgb(30, 30, 30);
+    background-color: rgb(255, 255, 255);
+}
+
+.outtxt {
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 20px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+
+/* TEMPLATE */
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+:root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+
+
+.card {
+    background: #191c29;
+    width: 300px;
+    height: 100px;
+    padding: 3px;
+    margin: 10px;
+    position: relative;
+    /* z-index: -1; */
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.card:hover {
+    font-size: 1.7em;
+    transition: 1s;
+    background: #ffffff00;
+}
+
+.card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+
+.card a {
+    color: inherit;
+    font-size: inherit;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+.flexforcard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* MAIN CSS STARTS HERE */
+img {
+    width: 40vw;
+    float: right;
+}
+
+section {
+    display: inline;
+}
