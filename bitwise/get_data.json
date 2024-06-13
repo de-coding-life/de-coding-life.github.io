@@ -1,0 +1,59 @@
+{
+  "@CLASS" : "com.arcesium.tram.common.frontend.TaxResponse",
+  "success" : true,
+  "message" : "PFIC SPNs fetched successfully",
+  "data" : [{
+      "recordId": 1,
+      "spn": 1, 
+      "comments": 'test',
+      "startYear" : 2022,
+      "endYear" : 2024,
+      "status": 'Yes',
+      "updatedBy": 'login1'
+      "knowledge_begin_date" : "2022-28-05 11:00 AM",
+      "knowledge_end_date" : null
+  },
+  {
+      "recordId": 2,
+      "spn": 2, 
+      "comments": 'test',
+      "startYear" : 2022,
+      "endYear" : 2024,
+      "status": 'Yes',
+      "knowledge_begin_date" : "2022-28-04 11:00 AM",
+      "knowledge_end_date" : null
+  },
+  {
+      "recordId": 3,
+      "spn": 10, 
+      "comments": 'test',
+      "startYear" : 2022,
+      "endYear" : 2024,
+      "status": 'Yes',
+      "updatedBy": 'login3'
+      "knowledge_begin_date" : "2022-28-01 11:01 AM",
+      "knowledge_end_date" : null
+  },
+  {
+      "recordId": 4,
+      "spn": 10, 
+      "comments": 'test',
+      "endYear" : 2024,
+      "status": 'Yes',
+      "updatedBy": 'login4'
+      "knowledge_begin_date" : "2022-28-02 11:00 AM",
+      "knowledge_end_date" : null
+  },
+  {
+      "recordId": 5,
+      "spn": 12, 
+      "comments": 'test',
+      "startYear" : 2022,
+      "endYear" : 2024,
+      "status": 'Yes',
+      "updatedBy": 'login5'
+      "knowledge_begin_date" : "2022-28-03 11:00 AM",
+      "knowledge_end_date" : null
+  },
+]
+}
